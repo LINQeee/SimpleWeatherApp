@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <base href="{{site.baseurl}}"/>
+    <meta name="description" content="Simple weather website for mini portfolio"/>
+    <meta charset="UTF-8">
+    <title>Weather in </title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <link rel="stylesheet" href="../styles/variables&utils.css">
+    <link rel="stylesheet" href="styles/weatherPageStyles.css">
+    <link rel="stylesheet" href="styles/currentInfoStyles.css">
+    <link rel="stylesheet" href="styles/currentStatsStyles.css">
+    <link rel="stylesheet" href="styles/forecastStyles.css">
+    <link rel="stylesheet" href="../styles/adaptiveStyles.css">
+    <link rel="icon" type="svg" href="../images/favicon.svg">
+    <link rel="stylesheet" href="../styles/warningPopupStyles.css">
+</head>
+<body>
+<div class="warningPopup">
+    <h3>Your api key empty, change source config.json file</h3>
+    <div class="inputBox">
+        <label for="keyInput">Upload api key for one session</label>
+        <input type="password" id="keyInput"/>
+    </div>
+    <button onclick="onWarningPopupSubmit()">Upload</button>
+</div>
+<div class="mainBox">
+    <div class="todayInfoWrapper">
+        <div class="todayInfo">
+            <div class="dateInfo">
+                <h5 id="country">Upload api key</h5>
+                <span id="cityStat">Upload api key</span>
+            </div>
+            <div class="weatherInfo">
+                <div class="currentInfoBox">
+                    <span id="currentTemp">-</span>
+                    <div class="currentStatus">
+                        <span id="dayTemp">Upload api key</span>
+                        <span id="currentStatus">Upload api key</span>
+                    </div>
+                </div>
+                <img id="currentStatusImage" src="https://cdn.weatherapi.com/weather/128x128/day/116.png"
+                     alt="statusImage"/>
+            </div>
+        </div>
+    </div>
+    <ul class="todayStats">
+        <li>
+            <div class="statName"><img src="../images/weatherStats/thermometer.svg" alt="statistic"/><span>Air temperature</span>
+            </div>
+            <span id="temp">Upload api key</span>
+        </li>
+        <li>
+            <div class="statName"><img src="../images/weatherStats/rain.svg"
+                                       alt="statistic"/><span>Precipitation</span></div>
+            <span id="precipitation">Upload api key</span>
+        </li>
+        <li>
+            <div class="statName"><img src="../images/weatherStats/wind.svg"
+                                       alt="statistic"/><span>Wind speed</span></div>
+            <span id="windSpeed">Upload api key</span>
+        </li>
+        <li>
+            <div class="statName"><img src="../images/weatherStats/drop.svg"
+                                       alt="statistic"/><span>Humidity</span></div>
+            <span id="humidity">Upload api key</span>
+        </li>
+        <li>
+            <div class="statName"><img src="../images/weatherStats/sun.svg"
+                                       alt="statistic"/><span>Index UV</span></div>
+            <span id="indexUV">Upload api key</span>
+        </li>
+    </ul>
+    <div class="forecastBox" id="forecast">
+        <div class="dayForecast">
+            <span>-</span>
+            <img src="https://cdn.weatherapi.com/weather/128x128/day/116.png" alt="status icon"/>
+            <div class="values">
+                <span>-</span>
+                <span>--</span>
+            </div>
+        </div>
+        <div class="dayForecast">
+            <span>-</span>
+            <img src="https://cdn.weatherapi.com/weather/128x128/day/116.png" alt="status icon"/>
+            <div class="values">
+                <span>-</span>
+                <span>-</span>
+            </div>
+        </div>
+        <div class="dayForecast">
+            <span>-</span>
+            <img src="https://cdn.weatherapi.com/weather/128x128/day/116.png" alt="status icon"/>
+            <div class="values">
+                <span>-</span>
+                <span>-</span>
+            </div>
+        </div>
+        <div class="dayForecast">
+            <span>Fri</span>
+            <img src="https://cdn.weatherapi.com/weather/128x128/day/116.png" alt="status icon"/>
+            <div class="values">
+                <span>-</span>
+                <span>-</span>
+            </div>
+        </div>
+        <div class="dayForecast">
+            <span>-</span>
+            <img src="https://cdn.weatherapi.com/weather/128x128/day/116.png" alt="status icon"/>
+            <div class="values">
+                <span>-</span>
+                <span>-</span>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="weatherPageLogic.js"></script>
+<script src="../utils/dateService.js"></script>
+<script src="../utils/weatherApi.js"></script>
+</body>
+</html>

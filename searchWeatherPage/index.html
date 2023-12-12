@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <base href="{{site.baseurl}}"/>
+    <meta name="description" content="Simple weather website for mini portfolio"/>
+    <meta charset="UTF-8">
+    <title>Search weather</title>
+    <link rel="stylesheet" href="searchPageStyles.css">
+    <link rel="stylesheet" href="../styles/variables&utils.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <link rel="stylesheet" href="../styles/adaptiveStyles.css">
+    <link rel="icon" type="svg" href="../images/favicon.svg">
+    <link rel="stylesheet" href="../styles/warningPopupStyles.css">
+</head>
+<body>
+<div class="warningPopup">
+    <h3>Your api key empty, change source config.json file</h3>
+    <div class="inputBox">
+        <label for="keyInput">Upload api key for one session</label>
+        <input type="password" id="keyInput"/>
+    </div>
+    <button onclick="onWarningPopupSubmit()">Upload</button>
+</div>
+<div class="mainBox">
+    <div class="logo"><img src="../images/logo.svg" alt="logo"/><span>iWeather</span></div>
+    <div class="header">
+        <h5>Welcome to <b>TypeWeather</b></h5>
+        <span>Choose a location to see the weather</span>
+    </div>
+    <div class="searchBox">
+        <input type="text" id="searchCityInput" placeholder="Search location"/>
+        <ul id="autocompleteList">
+        </ul>
+    </div>
+</div>
+<script src="../utils/weatherApi.js"></script>
+<script src="../utils/weatherService.js"></script>
+<script src="./searchPageLogic.js"></script>
+</body>
+</html>

@@ -1,0 +1,17 @@
+@media screen and (max-width: 900px) {
+    .mainBox {
+        width: 100% !important;
+    }
+}
+
+@media screen and (max-height: 900px) {
+    .mainBox {
+        height: 100vh !important;
+    }
+}
+
+@media screen and (max-height: 500px) {
+    .mainBox {
+        padding-top: 40vh !important;
+    }
+}

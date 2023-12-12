@@ -1,0 +1,12 @@
+:root {
+    --weather-background: url("../../images/weatherBackgrounds/fewCloudsNight.svg");
+}
+
+.mainBox {
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: start;
+    gap: 10px;
+}

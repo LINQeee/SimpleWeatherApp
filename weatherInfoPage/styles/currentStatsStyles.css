@@ -1,0 +1,45 @@
+.todayStats {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    list-style: none;
+    width: 100%;
+    background: var(--gray-800);
+    border-radius: 12px;
+    padding: 0 10px;
+    height: 38%;
+}
+
+.todayStats li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    flex: 1;
+}
+
+.todayStats li:not(:last-child) {
+    border-bottom: 1px solid var(--gray-700);
+}
+
+.statName {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.statName span {
+    color: var(--gray-200);
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.statName img {
+    width: 24px;
+}
+
+.todayStats li > span {
+    color: var(--gray-100);
+    font-size: 16px;
+    font-weight: 600;
+}
